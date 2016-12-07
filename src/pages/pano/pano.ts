@@ -24,7 +24,6 @@ export class PanoPage {
   }
 
   ngAfterViewInit() {
-  	console.log('hahahahahhahahhah');
   	var s = document.createElement("script");
 	s.type = "text/javascript";
 	s.src = "js/pano.js";
