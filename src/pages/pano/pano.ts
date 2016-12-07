@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 /*
@@ -13,7 +13,7 @@ import { NavController } from 'ionic-angular';
 })
 export class PanoPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public elementRef: ElementRef) {}
 
   ionViewDidLoad() {
     console.log('Hello PanoPage Page');
@@ -23,4 +23,11 @@ export class PanoPage {
   	this.navCtrl.pop();
   }
 
+  ngAfterViewInit() {
+  	console.log('hahahahahhahahhah');
+  	var s = document.createElement("script");
+	s.type = "text/javascript";
+	s.src = "js/pano.js";
+	this.elementRef.nativeElement.appendChild(s);
+  }
 }
